@@ -1,0 +1,1 @@
+Step1: Setup ffmpeg on your local machine

@@ -8,7 +8,7 @@ let stream = null;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:1212",
     credentials: true,
   })
 );
@@ -30,7 +30,9 @@ app.get("/stream", (req, res) => {
       ffmpegOptions: {
         // options ffmpeg flags
         "-stats": "", // an option with no neccessary value uses a blank string
-        "-r": 30, // options with required values specify the value after the key
+        "-r": 25, // options with required values specify the value after the key
+        "-b": "5000k", // an option for quality
+       // "-threads": 4,
         "-vf": "scale=-2:480"
       },
     });
